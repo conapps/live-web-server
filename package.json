@@ -1,0 +1,19 @@
+{
+  "name": "web-server",
+  "version": "1.0.0",
+  "description": "Web Server Playground for the HTML & CSS class.",
+  "main": "index.js",
+  "repository": "https://github.com/conapps/web-server-playground",
+  "author": "Guzman Monne",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "morgan": "^1.9.0"
+  },
+  "scripts": {
+    "serve": "nodemon index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
