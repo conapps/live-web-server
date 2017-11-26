@@ -20,6 +20,10 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
+  background: hsl(234, 26%, 15%) radial-gradient( 
+                hsl(234, 26%, 35%),
+                hsl(234, 26%, 15%)
+              );
 }
 
 .navbar {
@@ -152,10 +156,20 @@ body {
 
 .logo {
   border-radius: 50%;
-  animation-duration: 1s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-name: rotate;
+}
+
+.sandbox > a {
+  color: white;
+  text-decoration: none;
+  font-size: 6em;
+}
+
+.sandbox > a:hover {
+  animation:shake 0.2s infinite;
 }
 
 @media (min-width: 600px) {
@@ -199,11 +213,25 @@ body {
 @keyframes rotate {
   from {
     transform-origin: center;
-    transform: rotate3d(1, 1, 1, 0);
+    transform: rotate3d(0, 0, 1, 0);
   }
 
   to {
     transform-origin: center;
-    transform: rotate3d(1, 1, 1, 360deg);
+    transform: rotate3d(0, 0, 1, 360deg);
   }
+}
+
+@keyframes shake {
+    0% { transform: skewX(1deg); } 
+    10% { transform: skewX(-8deg); }
+    20% { transform: skewX(23deg); }
+    30% { transform: skewX(-70deg); text-shadow:17px 8px rgba(1, 1, 1, 0.65); }
+    40% { transform: skewX(30deg); }
+    50% { transform: skewX(-20deg); }
+    60% { transform: skewX(3deg); text-shadow:-10px 8px rgba(1, 1, 1, 0.65); }
+    70% { transform: skewX(-2deg); }
+    80% { transform: skewX(1deg); }
+    90% { transform: skewX(0deg); text-shadow:30px 18px rgba(1, 1, 1, 0.65); }
+    100% { transform: skewX(0deg);}
 }
